@@ -1,0 +1,8 @@
+G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts.DAL\bin\Debug\netcoreapp3.1\NewsPaper.Accounts.DAL.deps.json
+G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts.DAL\bin\Debug\netcoreapp3.1\NewsPaper.Accounts.DAL.dll
+G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts.DAL\obj\Debug\netcoreapp3.1\NewsPaper.Accounts.DAL.csprojAssemblyReference.cache
+G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts.DAL\obj\Debug\netcoreapp3.1\NewsPaper.Accounts.DAL.AssemblyInfoInputs.cache
+G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts.DAL\obj\Debug\netcoreapp3.1\NewsPaper.Accounts.DAL.AssemblyInfo.cs
+G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts.DAL\bin\Debug\netcoreapp3.1\NewsPaper.Accounts.DAL.runtimeconfig.json
+G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts.DAL\bin\Debug\netcoreapp3.1\NewsPaper.Accounts.DAL.runtimeconfig.dev.json
+G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts.DAL\obj\Debug\netcoreapp3.1\NewsPaper.Accounts.DAL.genruntimeconfig.cache
