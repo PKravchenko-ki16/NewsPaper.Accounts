@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "G:\\Repo\\Local_Nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -53,6 +54,10 @@
             "MassTransit.RabbitMQ": {
               "target": "Package",
               "version": "[7.0.6, )"
+            },
+            "NewsPaper.MassTransit.Configuration": {
+              "target": "Package",
+              "version": "[1.0.1, )"
             }
           },
           "imports": [

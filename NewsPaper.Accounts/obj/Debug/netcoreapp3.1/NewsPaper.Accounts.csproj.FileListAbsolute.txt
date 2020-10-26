@@ -37,8 +37,6 @@ G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts\bin\Debug\ne
 G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts\bin\Debug\netcoreapp3.1\NewsPaper.Accounts.runtimeconfig.dev.json
 G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts\bin\Debug\netcoreapp3.1\NewsPaper.Accounts.dll
 G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts\bin\Debug\netcoreapp3.1\NewsPaper.Accounts.pdb
-G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts\obj\Debug\netcoreapp3.1\NewsPaper.Accounts.csproj.CoreCompileInputs.cache
-G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts\obj\Debug\netcoreapp3.1\NewsPaper.Accounts.MvcApplicationPartsAssemblyInfo.cache
 G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts\obj\Debug\netcoreapp3.1\NewsPaper.Accounts.dll
 G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts\obj\Debug\netcoreapp3.1\NewsPaper.Accounts.pdb
 G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts\obj\Debug\netcoreapp3.1\NewsPaper.Accounts.genruntimeconfig.cache

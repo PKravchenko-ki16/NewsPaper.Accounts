@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using NewsPaper.Accounts.ConfigureServices;
+using NewsPaper.MassTransit.Configuration;
 
 namespace NewsPaper.Accounts
 {
@@ -18,8 +18,13 @@ namespace NewsPaper.Accounts
 
         public void ConfigureServices(IServiceCollection services)
         {
+            var section = Configuration.GetSection("MassTransit");
             services.AddControllers();
-            ConfigureServicesMassTransit.ConfigureServices(services, Configuration);
+            ConfigureServicesMassTransit.ConfigureServices(services, Configuration, new MassTransitConfiguration()
+            {
+                IsDebug = section.GetValue<bool>("IsDebug"),
+                ServiceName = "Accounts"
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
