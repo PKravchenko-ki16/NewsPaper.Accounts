@@ -6,11 +6,18 @@ using NewsPaper.Accounts.Models.Interfaces;
 namespace NewsPaper.Accounts.Models
 {
     [Table("Editor")]
-    public class Editor : IDomainObject
+    public class Editor : DomainObject
     {
-        [Key]
+        public Editor() { }
+
+        public Editor(Guid id, Guid identityGuid)
+        {
+            Id = id;
+            IdentityGuid = identityGuid;
+        }
+
         [Column("editor_id")]
-        public Guid Id { get; }
+        public override Guid Id { get; }
 
         [Required]
         [Column("identity_guid")]

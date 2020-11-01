@@ -2,9 +2,9 @@
 {
     public interface IUnitOfWork
     {
-        IRepository<User> UsersRepository { get; }
-        IRepository<Author> AuthorsRepository { get; }
-        IRepository<Editor> EditorsRepository { get; }
+        IUsersRepository UsersRepository { get; }
+        IAuthorsRepository AuthorsRepository { get; }
+        IEditorsRepository EditorsRepository { get; }
         bool SaveChanges();
         void Discard();
     }

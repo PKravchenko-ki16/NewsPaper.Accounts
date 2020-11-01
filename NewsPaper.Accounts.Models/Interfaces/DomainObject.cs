@@ -2,8 +2,8 @@
 
 namespace NewsPaper.Accounts.Models.Interfaces
 {
-    public interface IDomainObject
+    public abstract class DomainObject
     {
-        Guid Id { get; }
+        public abstract Guid Id { get; }
     }
 }

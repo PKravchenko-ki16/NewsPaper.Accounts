@@ -6,3 +6,10 @@ G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts.DAL\obj\Debu
 G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts.DAL\bin\Debug\netcoreapp3.1\NewsPaper.Accounts.DAL.runtimeconfig.json
 G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts.DAL\bin\Debug\netcoreapp3.1\NewsPaper.Accounts.DAL.runtimeconfig.dev.json
 G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts.DAL\obj\Debug\netcoreapp3.1\NewsPaper.Accounts.DAL.genruntimeconfig.cache
+G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts.DAL\bin\Debug\netcoreapp3.1\NewsPaper.Accounts.DAL.pdb
+G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts.DAL\bin\Debug\netcoreapp3.1\NewsPaper.Accounts.Models.dll
+G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts.DAL\bin\Debug\netcoreapp3.1\NewsPaper.Accounts.Models.pdb
+G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts.DAL\obj\Debug\netcoreapp3.1\NewsPaper.Accounts.DAL.csproj.CoreCompileInputs.cache
+G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts.DAL\obj\Debug\netcoreapp3.1\NewsPaper.Accounts.DAL.csproj.CopyComplete
+G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts.DAL\obj\Debug\netcoreapp3.1\NewsPaper.Accounts.DAL.dll
+G:\Repo\NewsPaperMicroservice\NewsPaper.Accounts\NewsPaper.Accounts.DAL\obj\Debug\netcoreapp3.1\NewsPaper.Accounts.DAL.pdb
