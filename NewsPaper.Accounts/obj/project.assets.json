@@ -609,7 +609,7 @@
           "lib/netcoreapp3.1/NewsPaper.MassTransit.Configuration.dll": {}
         }
       },
-      "NewsPaper.MassTransit.Contracts/1.0.0": {
+      "NewsPaper.MassTransit.Contracts/1.0.6": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.1/NewsPaper.MassTransit.Contracts.dll": {}
@@ -2589,14 +2589,14 @@
         "newspaper.masstransit.configuration.nuspec"
       ]
     },
-    "NewsPaper.MassTransit.Contracts/1.0.0": {
-      "sha512": "Wvomdz2w/yZp8SPu1Abu/n77e8eBNc9GO7zxVaAwuZMPqcOWlPHvGbQaiaOUcDV4blv9jSLWXlFyWtVKg05kig==",
+    "NewsPaper.MassTransit.Contracts/1.0.6": {
+      "sha512": "nf98m3oUsLamr95rLd2cXakQYAZk7kor3zwYm3DFndnOUkJe9PptZABHEGrkdNKxmZrAfgPkGEb92wp28lU1HA==",
       "type": "package",
-      "path": "newspaper.masstransit.contracts/1.0.0",
+      "path": "newspaper.masstransit.contracts/1.0.6",
       "files": [
         ".nupkg.metadata",
         "lib/netcoreapp3.1/NewsPaper.MassTransit.Contracts.dll",
-        "newspaper.masstransit.contracts.1.0.0.nupkg.sha512",
+        "newspaper.masstransit.contracts.1.0.6.nupkg.sha512",
         "newspaper.masstransit.contracts.nuspec"
       ]
     },
@@ -6122,7 +6122,7 @@
       "NewsPaper.Accounts.BusinessLayer >= 1.0.0",
       "NewsPaper.Accounts.DAL >= 1.0.0",
       "NewsPaper.MassTransit.Configuration >= 1.0.1",
-      "NewsPaper.MassTransit.Contracts >= 1.0.0"
+      "NewsPaper.MassTransit.Contracts >= 1.0.6"
     ]
   },
   "packageFolders": {
@@ -6204,7 +6204,7 @@
           },
           "NewsPaper.MassTransit.Contracts": {
             "target": "Package",
-            "version": "[1.0.0, )"
+            "version": "[1.0.6, )"
           }
         },
         "imports": [
