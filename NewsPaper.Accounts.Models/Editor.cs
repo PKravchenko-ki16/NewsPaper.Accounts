@@ -16,6 +16,13 @@ namespace NewsPaper.Accounts.Models
             IdentityGuid = identityGuid;
         }
 
+        public Editor(string nikeName, string fullName, string email)
+        {
+            NikeName = nikeName;
+            FullName = fullName;
+            Email = email;
+        }
+
         [Column("editor_id")]
         public override Guid Id { get; }
 

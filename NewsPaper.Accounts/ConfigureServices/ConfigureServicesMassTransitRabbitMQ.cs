@@ -1,5 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using NewsPaper.Accounts.MassTransit.Authors;
+using NewsPaper.Accounts.MassTransit.Editors;
+using NewsPaper.Accounts.MassTransit.Users;
 using NewsPaper.MassTransit.Configuration;
 using ConfigureServicesMassTransit = NewsPaper.MassTransit.Configuration.ConfigureServicesMassTransit;
 
@@ -16,7 +19,12 @@ namespace NewsPaper.Accounts.ConfigureServices
                 ServiceName = "Accounts",
                 Configurator = busMassTransit =>
                 {
-                    //busMassTransit.AddConsumer<ArticlesConsumer>();
+                    busMassTransit.AddConsumer<GetGuidAuthorConsumer>();
+                    busMassTransit.AddConsumer<GetGuidEditorConsumer>();
+                    busMassTransit.AddConsumer<GetGuidUserConsumer>();
+                    busMassTransit.AddConsumer<GetNikeNameAuthorConsumer>();
+                    busMassTransit.AddConsumer<GetNikeNameEditorConsumer>();
+                    busMassTransit.AddConsumer<GetNikeNameUserConsumer>();
                 }
             });
         }

@@ -18,7 +18,7 @@ namespace NewsPaper.Accounts.Controllers
         }
 
         [HttpGet("geteditorbyid")]
-        public async Task<IActionResult> GetEditorAccountById(Guid editorGuid)
+        public async Task<IActionResult> GetEditorById(Guid editorGuid)
         {
             try
             {

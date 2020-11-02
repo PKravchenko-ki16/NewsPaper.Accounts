@@ -10,6 +10,8 @@ namespace NewsPaper.Accounts.Infrastructure.DependencyInjection
         {
             services.AddTransient<ApplicationContext>();
             services.AddTransient<OperationAuthorsAccounts>();
+            services.AddTransient<OperationEditorsAccounts>();
+            services.AddTransient<OperationUsersAccounts>();
         }
     }
 }

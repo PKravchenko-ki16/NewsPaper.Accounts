@@ -20,9 +20,13 @@ namespace NewsPaper.Accounts.DAL
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //FakeInitializerEntity.Init(10);
-            //modelBuilder.Entity<Article>().HasKey(u => u.Id);
-            //modelBuilder.Entity<Article>().HasData(FakeInitializerEntity.Article);
+            FakeInitializerEntity.Init(2);
+            modelBuilder.Entity<Author>().HasKey(u => u.Id);
+            modelBuilder.Entity<Editor>().HasKey(u => u.Id);
+            modelBuilder.Entity<User>().HasKey(u => u.Id);
+            modelBuilder.Entity<Author>().HasData(FakeInitializerEntity.Authors);
+            modelBuilder.Entity<Editor>().HasData(FakeInitializerEntity.Editors);
+            modelBuilder.Entity<User>().HasData(FakeInitializerEntity.Users);
         }
     }
 }

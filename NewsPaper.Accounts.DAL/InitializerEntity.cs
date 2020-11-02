@@ -2,61 +2,63 @@
 using System.Collections.Generic;
 using Bogus;
 using Bogus.DataSets;
+using NewsPaper.Accounts.Models;
 
 namespace NewsPaper.Accounts.DAL
 {
     public static class FakeInitializerEntity
     {
-        //public static List<Article> Article = new List<Article>();
+        public static List<Author> Authors = new List<Author>();
+        public static List<Editor> Editors = new List<Editor>();
+        public static List<User> Users = new List<User>();
 
-        //public static void Init(int count)
-        //{
-        //    var articleFaker = new Faker<Article>("ru")
-        //        .RuleFor(x => x.Title, f => f.Lorem.Sentence(5))
-        //        .RuleFor(x => x.Description, f => f.Lorem.Paragraph())
-        //        .RuleFor(x => x.Text, f => f.Lorem.Text())
-        //        .RuleFor(x => x.Picture, f => f.Image.PlaceholderUrl(400, 300))
-        //        .RuleFor(x => x.Rating, f => f.Random.Byte(1, 100))
-        //        .RuleFor(x => x.NikeNameAuthor, f => f.Name.FirstName(Name.Gender.Male))
-        //        .RuleFor(x => x.AuthorGuid, f => Guid.NewGuid())
-        //        .RuleFor(x => x.EditorGuid, f => Guid.NewGuid())
-        //        .RuleFor(x => x.IsArchive, f => f.Random.Bool())
-        //        .RuleFor(x => x.IsRevision, true)
-        //        .RuleFor(x => x.DateOfWriting,
-        //            f => f.Date.Between(new DateTime(2008, 5, 1), new DateTime(2018, 5, 1)))
-        //        .RuleFor(x => x.DateOfRevision,
-        //            f => f.Date.Between(new DateTime(2018, 5, 2), new DateTime(2020, 10, 1)));
+        public static void Init(int count)
+        {
+            var authorsFaker = new Faker<Author>("ru")
+                .RuleFor(x => x.FullName, f => f.Name.FullName(Name.Gender.Male))
+                .RuleFor(x => x.NikeName, f => f.Name.FirstName(Name.Gender.Male))
+                .RuleFor(x => x.Email, f => f.Internet.Email());
 
-        //    var articles = articleFaker.Generate(count);
+            var editorsFaker = new Faker<Editor>("ru")
+                .RuleFor(x => x.FullName, f => f.Name.FullName(Name.Gender.Male))
+                .RuleFor(x => x.NikeName, f => f.Name.FirstName(Name.Gender.Male))
+                .RuleFor(x => x.Email, f => f.Internet.Email());
 
-        //    InitIdArticles(count);
-        //    SetIdArticles(articles);
-        //}
+            var usersFaker = new Faker<User>("ru")
+                .RuleFor(x => x.NikeName, f => f.Name.FirstName(Name.Gender.Male));
 
-        //private static void InitIdArticles(int count)
-        //{
-        //    for (int i = 0; i < count; i++)
-        //    {
-        //        Article.Add(new Article(Guid.NewGuid()));
-        //    }
-        //}
-        //private static void SetIdArticles(List<Article> articles)
-        //{
-        //    for (int i = 0; i < Article.Count; i++)
-        //    {
-        //        Article[i].Title = articles[i].Title;
-        //        Article[i].Description = articles[i].Description;
-        //        Article[i].Text = articles[i].Text;
-        //        Article[i].Picture = articles[i].Picture;
-        //        Article[i].Rating = articles[i].Rating;
-        //        Article[i].NikeNameAuthor = articles[i].NikeNameAuthor;
-        //        Article[i].AuthorGuid = articles[i].AuthorGuid;
-        //        Article[i].EditorGuid = articles[i].EditorGuid;
-        //        Article[i].IsArchive = articles[i].IsArchive;
-        //        Article[i].IsRevision = articles[i].IsRevision;
-        //        Article[i].DateOfWriting = articles[i].DateOfWriting;
-        //        Article[i].DateOfRevision = articles[i].DateOfRevision;
-        //    }
-        //}
+            var authors = authorsFaker.Generate(count);
+            var editors = editorsFaker.Generate(count);
+            var users = usersFaker.Generate(count);
+
+            InitId(count);
+            SetAuthors(authors, editors, users);
+        }
+
+        private static void InitId(int count)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                Authors.Add(new Author(Guid.NewGuid(), Guid.NewGuid()));
+                Editors.Add(new Editor(Guid.NewGuid(), Guid.NewGuid()));
+                Users.Add(new User(Guid.NewGuid(), Guid.NewGuid()));
+            }
+        }
+
+        private static void SetAuthors(List<Author> authors, List<Editor> editors, List<User> users)
+        {
+            for (int i = 0; i < Authors.Count; i++)
+            {
+                Authors[i].NikeName = authors[i].NikeName;
+                Authors[i].FullName = authors[i].FullName;
+                Authors[i].Email = authors[i].Email;
+                
+                Editors[i].NikeName = editors[i].NikeName;
+                Editors[i].FullName = editors[i].FullName;
+                Editors[i].Email = editors[i].Email;
+
+                Users[i].NikeName = users[i].NikeName;
+            }
+        }
     }
 }

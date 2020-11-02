@@ -16,6 +16,11 @@ namespace NewsPaper.Accounts.Models
             IdentityGuid = identityGuid;
         }
 
+        public User(string nikeName)
+        {
+            NikeName = nikeName;
+        }
+
         [Column("user_id")]
         public override Guid Id { get; }
 
