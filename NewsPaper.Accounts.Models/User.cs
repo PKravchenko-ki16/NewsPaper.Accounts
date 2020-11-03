@@ -21,6 +21,7 @@ namespace NewsPaper.Accounts.Models
             NikeName = nikeName;
         }
 
+        [Required]
         [Column("user_id")]
         public override Guid Id { get; }
 

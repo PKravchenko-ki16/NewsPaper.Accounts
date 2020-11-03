@@ -17,6 +17,20 @@ namespace NewsPaper.Accounts.Controllers
             _operationAuthors = operationAuthors;
         }
 
+        [HttpGet("getauthors")]
+        public async Task<IActionResult> GetAllAuthors()
+        {
+            try
+            {
+                var result = await _operationAuthors.GetAllAuthorsAsync();
+                return Ok(result);
+            }
+            catch (NoAuthorFoundException exception)
+            {
+                return Ok(exception);
+            }
+        }
+
         [HttpGet("getauthorbyid")]
         public async Task<IActionResult> GetAuthorById(Guid authorGuid)
         {
@@ -46,11 +60,11 @@ namespace NewsPaper.Accounts.Controllers
         }
 
         [HttpGet("getnikenameauthorbyguid")]
-        public async Task<IActionResult> GetNikeNameByGuidAuthorAsync(string nikeName)
+        public async Task<IActionResult> GetNikeNameByGuidAuthorAsync(Guid authorGuid)
         {
             try
             {
-                var result = await _operationAuthors.GetGuidByNikeNameAuthorAsync(nikeName);
+                var result = await _operationAuthors.GetNikeNameByGuidAuthorAsync(authorGuid);
                 return Ok(result);
             }
             catch (NoAuthorFoundException exception)

@@ -39,9 +39,9 @@ namespace NewsPaper.Accounts.DAL
         {
             for (int i = 0; i < count; i++)
             {
-                Authors.Add(new Author(Guid.NewGuid(), Guid.NewGuid()));
-                Editors.Add(new Editor(Guid.NewGuid(), Guid.NewGuid()));
-                Users.Add(new User(Guid.NewGuid(), Guid.NewGuid()));
+                Authors.Add(new Author(id: Guid.NewGuid(), identityGuid: Guid.NewGuid()));
+                Editors.Add(new Editor(id: Guid.NewGuid(), identityGuid: Guid.NewGuid()));
+                Users.Add(new User(id: Guid.NewGuid(), identityGuid: Guid.NewGuid()));
             }
         }
 

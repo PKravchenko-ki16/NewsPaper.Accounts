@@ -23,6 +23,7 @@ namespace NewsPaper.Accounts.Models
             Email = email;
         }
 
+        [Required]
         [Column("editor_id")]
         public override Guid Id { get; }
 

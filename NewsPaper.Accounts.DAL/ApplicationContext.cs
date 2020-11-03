@@ -24,6 +24,9 @@ namespace NewsPaper.Accounts.DAL
             modelBuilder.Entity<Author>().HasKey(u => u.Id);
             modelBuilder.Entity<Editor>().HasKey(u => u.Id);
             modelBuilder.Entity<User>().HasKey(u => u.Id);
+            modelBuilder.Entity<Author>().Property(b => b.IdentityGuid).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction); ;
+            modelBuilder.Entity<Editor>().Property(b => b.IdentityGuid).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction); ;
+            modelBuilder.Entity<User>().Property(b => b.IdentityGuid).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction); ;
             modelBuilder.Entity<Author>().HasData(FakeInitializerEntity.Authors);
             modelBuilder.Entity<Editor>().HasData(FakeInitializerEntity.Editors);
             modelBuilder.Entity<User>().HasData(FakeInitializerEntity.Users);
