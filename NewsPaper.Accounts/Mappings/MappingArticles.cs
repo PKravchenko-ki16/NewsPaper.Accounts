@@ -6,9 +6,9 @@ using NewsPaper.MassTransit.Contracts.DTO.Models.User;
 
 namespace NewsPaper.Accounts.Mappings
 {
-    public class MappingArticles : MapperConfigurationBase
+    public class MappingAccounts : MapperConfigurationBase
     {
-        public MappingArticles()
+        public MappingAccounts()
         {
             CreateMap<Author,AuthorDto>();
             CreateMap<Editor, EditorDto>();

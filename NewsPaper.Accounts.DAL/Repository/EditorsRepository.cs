@@ -29,12 +29,12 @@ namespace NewsPaper.Accounts.DAL.Repository
 
         public async Task<Guid> GetGuidByNikeNameEditorAsync(string editorNikeName)
         {
-            return await _context.Author.Where(x => x.NikeName == editorNikeName).Select(x => x.Id).FirstOrDefaultAsync();
+            return await _context.Editor.Where(x => x.NikeName == editorNikeName).Select(x => x.Id).FirstOrDefaultAsync();
         }
 
         public async Task<string> GetNikeNameByGuidEditorAsync(Guid editorGuid)
         {
-            return await _context.Author.Where(x => x.Id == editorGuid).Select(x => x.NikeName).FirstOrDefaultAsync();
+            return await _context.Editor.Where(x => x.Id == editorGuid).Select(x => x.NikeName).FirstOrDefaultAsync();
         }
     }
 }
