@@ -36,5 +36,10 @@ namespace NewsPaper.Accounts.DAL.Repository
         {
             return await _context.Author.Where(x => x.Id == authorGuid).Select(x => x.NikeName).FirstOrDefaultAsync();
         }
+
+        public async Task<Author> GetByIdentityIdAsync(Guid identityId)
+        {
+            return await _context.Author.Where(x => x.IdentityGuid == identityId).FirstOrDefaultAsync();
+        }
     }
 }

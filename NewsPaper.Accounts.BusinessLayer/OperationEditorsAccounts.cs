@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using NewsPaper.Accounts.DAL;
 using NewsPaper.Accounts.Models;
@@ -39,6 +40,15 @@ namespace NewsPaper.Accounts.BusinessLayer
             if (editorNikeName == null)
                 throw new NoEditorFoundException("No editor found by editorId");
             return editorNikeName;
+        }
+
+        public async Task<Editor> GetFreeEditorAsync()
+        {
+            var editors = await _entity.EditorsRepository.GetAllAsync();
+            var editor = editors.OrderBy(x => x.CountUnderRevisionArticles).FirstOrDefault();
+            if (editor == null)
+                throw new FailedGetAccountsToCreateArticleException("No free editor found");
+            return editor;
         }
     }
 }

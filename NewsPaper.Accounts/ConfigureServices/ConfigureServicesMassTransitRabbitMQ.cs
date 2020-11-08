@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using NewsPaper.Accounts.MassTransit.Authors;
 using NewsPaper.Accounts.MassTransit.Editors;
+using NewsPaper.Accounts.MassTransit.Operation;
 using NewsPaper.Accounts.MassTransit.Users;
 using NewsPaper.MassTransit.Configuration;
 using ConfigureServicesMassTransit = NewsPaper.MassTransit.Configuration.ConfigureServicesMassTransit;
@@ -33,6 +34,8 @@ namespace NewsPaper.Accounts.ConfigureServices
                     busMassTransit.AddConsumer<GetUsersConsumer>();
                     busMassTransit.AddConsumer<GetGuidUserConsumer>();
                     busMassTransit.AddConsumer<GetNikeNameUserConsumer>();
+
+                    busMassTransit.AddConsumer<AccountsForCreateArticleConsumer>();
                 }
             });
         }

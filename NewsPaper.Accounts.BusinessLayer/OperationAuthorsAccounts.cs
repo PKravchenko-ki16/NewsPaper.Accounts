@@ -25,6 +25,11 @@ namespace NewsPaper.Accounts.BusinessLayer
             return await _entity.AuthorsRepository.GetByIdAsync(authorGuid);
         }
 
+        public async Task<Author> GetAuthorByIdentityIdAsync(Guid identityId)
+        {
+            return await _entity.AuthorsRepository.GetByIdentityIdAsync(identityId);
+        }
+
         public async Task<Guid> GetGuidByNikeNameAuthorAsync(string authorNikeName)
         {
             var authorGuid = await _entity.AuthorsRepository.GetGuidByNikeNameAuthorAsync(authorNikeName);

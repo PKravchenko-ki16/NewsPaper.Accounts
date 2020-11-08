@@ -7,5 +7,6 @@ namespace NewsPaper.Accounts.Models.Interfaces
     {
         Task<Guid> GetGuidByNikeNameAuthorAsync(string authorNikeName);
         Task<string> GetNikeNameByGuidAuthorAsync(Guid authorGuid);
+        Task<Author> GetByIdentityIdAsync(Guid identityId);
     }
 }
