@@ -29,7 +29,7 @@ namespace NewsPaper.Accounts.MassTransit.Operation
         {
             try
             {
-                var resultAuthor = await _operationAuthors.GetAuthorByIdentityIdAsync(context.Message.AuthorGuid);
+                var resultAuthor = await _operationAuthors.GetAuthorByIdentityIdAsync(context.Message.AuthorIdentityId);
                 var resultEditor = await _operationEditors.GetFreeEditorAsync();
                 var author = _mapper.Map<AuthorDto>(resultAuthor);
                 var editor = _mapper.Map<EditorDto>(resultEditor);
